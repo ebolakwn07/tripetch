@@ -21,7 +21,7 @@
     position: relative;
 }
 .img-american-football{
-    background-image: url("https://github.com/ebolakwn07/tripetch/blob/7f677f7d0f0b0c46abec7eda165af937e12b3294/image/img-american-football.svg");
+    background-image: url("image/img-american-football.svg");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 90% 100%;
