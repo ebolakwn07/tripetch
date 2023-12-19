@@ -21,7 +21,7 @@
     position: relative;
 }
 .img-american-football{
-    background-image: url(../image/img-american-football.svg);
+    background-image: url('./image/img-american-football.svg');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 90% 100%;
