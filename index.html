@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style/main.css">
+
+    <style>
+        body {
+            font-family: "Roboto", serif;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="headline right">ATHLETES</div>
+        <div class="wrapper-box">
+            <div class="img-american-football">
+                <div class="graphic-mobile">
+                    <div class="plus1"><img src="image/plus1.svg" /></div>
+                    <div class="plus2"><img src="image/plus2.svg" /></div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <div id="slide-1" class="box-content bg-white">
+                        <div class="wrapper-content right">
+                            <div class="content-headline">
+                                <div class="text-number">01</div>
+                                <div class="text-title">CONNECTION</div>
+                            </div>
+                            <div>Connect with coaches directly, you can ping coaches to view profile.</div>
+                        </div>
+                    </div>
+                    <div id="slide-2" class="box-content bg-grey">
+                        <div class="wrapper-content right">
+                            <div class="content-headline">
+                                <div class="text-number">02</div>
+                                <div class="text-title">COLLABORATION</div>
+                            </div>
+                            <div>Work with other student athletes to  increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.</div>
+                        </div>
+                    </div>
+                    <div id="slide-3" class="box-content bg-purple">
+                        <div class="wrapper-content right">
+                            <div class="content-headline">
+                                <div class="text-number white">03</div>
+                                <div class="text-title">GROWTH</div>
+                            </div>
+                            <div class="text-white">Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav1" class="slider__nav">
+                    <a class="slider__navlink active"></a>
+                    <a class="slider__navlink"></a>
+                    <a class="slider__navlink"></a>
+                </div>
+            </div>
+        </div>
+        <div class="headline left">PLAYERS</div>
+        <div class="wrapper-box">
+            <div class="slider">
+                <div class="slides">
+                    <div class="box-content2 bg-white">
+                        <div class="wrapper-content left">
+                            <div class="content-headline">
+                                <div class="text-number">01</div>
+                                <div class="text-title">CONNECTION</div>
+                            </div>
+                            <div>Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.</div>
+                        </div>
+                    </div>
+                    <div class="box-content2 bg-grey">
+                        <div class="wrapper-content left">
+                            <div class="content-headline">
+                                <div class="text-number">02</div>
+                                <div class="text-title">COLLABORATION</div>
+                            </div>
+                            <div>Work with recruiter to increase your chances of finding talented athlete.</div>
+                        </div>
+                    </div>
+                    <div class="box-content2 bg-navy">
+                        <div class="wrapper-content left">
+                            <div class="content-headline">
+                                <div class="text-number white text-purple">03</div>
+                                <div class="text-title">GROWTH</div>
+                            </div>
+                            <div class="text-white">Save your time, recruit proper athlets for your team.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav2" class="slider__nav">
+                    <a class="slider__navlink2 active"></a>
+                    <a class="slider__navlink2"></a>
+                    <a class="slider__navlink2"></a>
+                </div>
+            </div>
+            <div class="img-basketball"></div>
+        </div>
+    </div>
+    <script>
+        
+        let pages = document.getElementsByClassName("box-content");
+        let navs = document.getElementById('nav1');
+        let buttons = document.getElementsByClassName("slider__navlink");
+
+        let pages2 = document.getElementsByClassName("box-content2");
+        let navs2 = document.getElementById('nav2');
+        let buttons2 = document.getElementsByClassName("slider__navlink2");
+
+        let currentPage = 0;
+        let currentPage2 = 0;
+        pages[currentPage].style.display = "block";
+        pages2[currentPage2].style.display = "block";
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function() {
+                changePage(i)
+                var current = navs.getElementsByClassName("active");
+                if (current.length > 0) { 
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                buttons[i].className += " active";
+            });
+        }
+
+        for (let i = 0; i < buttons2.length; i++) {
+            buttons2[i].addEventListener("click", function() {
+                changePage2(i)
+                var current2 = navs2.getElementsByClassName("active");
+                if (current2.length > 0) { 
+                    current2[0].className = current2[0].className.replace(" active", "");
+                }
+                buttons2[i].className += " active";
+            });
+        }
+
+        function changePage(k) {
+            pages[currentPage].style.display = "none";
+            pages[k].style.display = "block";
+            currentPage = k;
+        }
+
+        function changePage2(k) {
+            pages2[currentPage2].style.display = "none";
+            pages2[k].style.display = "block";
+            currentPage2 = k;
+        }
+
+    </script>
+</body>
+</html>
