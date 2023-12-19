@@ -139,7 +139,7 @@
         max-width: 300px;
         width: 100%;
         min-height: 400px;
-        background-image: url("../image/img-american-football.svg"), url("../image/path.svg");
+        background-image: url("image/img-american-football.svg"), url("image/path.svg");
         background-position: top center, top right 20px;
         background-size: contain, 90%;
         z-index: 50;
